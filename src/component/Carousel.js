@@ -48,9 +48,10 @@ const Carousel = () => {
         {carouselSlides.map((carouselSlide)=>{
            return (
             <div className='wrapper' style={{transform: `translate(${-currentSlide * 100}vw)`}}>
-                 <img src={carouselSlide.img} alt='image'/>
+                 <img src={carouselSlide.img} alt='image'/>                 
                  <h1>{carouselSlide.title}</h1>
                  <p>{carouselSlide.subTitle}</p>
+                 <button>Explore</button>
             </div>
            )
         })}

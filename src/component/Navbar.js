@@ -4,12 +4,17 @@ import SearchIcon from '@mui/icons-material/Search';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import { useSelector,useDispatch} from 'react-redux'
+import {NavLink} from 'react-router-dom'
+
 
 import VnFlag from '../Images/VN.png'
 import "./Navbar.scss"
+import { openCartModal } from "../redux/cartReducer";
 
 const Navbar = () => {
-
+const products=useSelector((state)=> state.cart.items)
+const dispatch=useDispatch()
     return (
         <div className="navbar_wrapper">
             <div className="navbar_left">
@@ -43,11 +48,15 @@ const Navbar = () => {
                 </div>
                 <div className="icons">
                     <SearchIcon />
-                    <PermIdentityIcon />
+                    <div className="user">
+                        <NavLink to='SignUp'>
+                           <PermIdentityIcon />
+                        </NavLink>
+                    </div>                   
                     <FavoriteBorderIcon />
-                    <div className="cart">
+                    <div className="cart" onClick={()=> dispatch(openCartModal())}>
                        <ShoppingCartCheckoutIcon />
-                       <span>0</span>
+                       <span>{products.length}</span>
                     </div>
                 </div>
             </div>

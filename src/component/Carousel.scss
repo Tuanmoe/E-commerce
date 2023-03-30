@@ -1,36 +1,49 @@
 .Carousel{
    white-space: nowrap;
-   width: 100vw;
-   height:100vh;
    padding-top:80px;
    overflow:hidden;
    .wrapper {
     position: relative;
     transition: all 2s ease ;
     display: inline-block;
-    height: 100vh;
+    height:600px;
     width:100vw;
-
+    background-color: rgb(136, 199, 131);
 
     img {
-        width: 100vw;
-        height: 100vh;
+        margin-top:50px;
+        width:400px;
+        height:500px;
+        position: absolute;
+        right:180px;
        }
-       h1 {
+    
+    h1 {
         position: absolute;
         top:30%;
-        left: 40%;
+        left: 20%;
         color:white;
-        font-size: 48px;
+        font-size:48px;
        }
-       p {
+    p {
         position: absolute;
-        top:40%;
-        left: 40%;
+        top:42%;
+        left:20%;
         color:white;
-        font-size: 24px;
+        font-size:24px;
         font-weight: 300;
        }
+    button {
+        position: absolute;
+        top:52%;
+        left:20%;
+        padding:8px 24px;
+        border-radius: 8px;
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
    }
    
   

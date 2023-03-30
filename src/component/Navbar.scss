@@ -1,18 +1,21 @@
 .navbar_wrapper {
     position: fixed !important;
     display: flex;
-    margin-top: 20px;
-    margin-left:32px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    width: 100%;
     gap:130px;
     z-index: 1;
+    background-color: white;
   
   .navbar_left {
     display: flex;
     gap:6px;
+    margin-left: 32px;
   
     .lang {
       display: flex;
-      margin-top: 6px;
+      margin-top: 9px;
   
       img {
         width: 24px;
@@ -25,10 +28,10 @@
     
     .currency {
       display: flex;
-      margin-top: 6px;
+      margin-top: 8px;
       
       p {
-        margin-top:-2px;
+        margin-top:-4px;
       }
       .arrow {
         margin-top:-5px;
@@ -38,17 +41,15 @@
       display:flex;
       gap:24px;
     h1 {
-      font-family: 'Montserrat', sans-serif;
       font-size:22px;
-      font-weight: 500;
+      font-weight:400;
     }
   }
   }
   .logo_center {
-    font-family: 'Montserrat', sans-serif;
     font-size:40px;
     font-weight: 500;
-    margin-top: -5px;
+    margin-top: -15px;
   }
   
   .navbar_right {
@@ -59,17 +60,18 @@
       display: flex;
       gap:24px;
     h1 {
-      font-family: 'Montserrat', sans-serif;
       font-size:22px;
-      font-weight: 500;
+      font-weight:400;
      }
    }
     .icons {
       display: flex;
       gap:8px;
+      margin-top: 3px;
     }
     .cart {
       position: relative;
+      cursor: pointer;
       span {
         display: inline-block;
         background-color: blue;

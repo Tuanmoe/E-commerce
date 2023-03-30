@@ -3,9 +3,14 @@ import './FeaturedProducts.scss'
 import {client} from '../client'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import { useSelector, useDispatch } from 'react-redux'
+import { addToCart, openProductModal} from '../redux/cartReducer'
+
 
 const FeaturedProducts = () => {
+  const dispatch=useDispatch()
   const [listProducts,setListProducts]=useState([])
+  
 
   const cleanUpFunction = (rawdata) => {
     const clearData=rawdata.map((featureProduct)=>{
@@ -44,20 +49,37 @@ const FeaturedProducts = () => {
       
         {listProducts.map((item)=> {
           return (
-              <div className='product_card' key={item.id}>
+              <div className='product_card' key={item.id} >
                   <div className='favorite_icon'>
                      <FavoriteBorderIcon />       
                   </div>
-                  <img src={item.img} alt='image1' />
-                  <h1 className='name'>{item.name}</h1>
+                  <img src={item.img} alt='image1' onClick={()=> dispatch(openProductModal({                    
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                img:item.img,                   
+            }))} />
+                  <h1 className='name' onClick={()=> dispatch(openProductModal({                    
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                img:item.img,                   
+            }))}>{item.name}</h1>
                   <h1 className='price'>{item.price}</h1>
-                  <div className='cart_icon'>
+                  <div className='cart_icon'  onClick={()=> dispatch(addToCart({                    
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                img:item.img,                   
+            }))} >
                     <ShoppingCartCheckoutIcon/>       
                   </div>
               </div>
         )
       })}
     </div>
+    
+  
     </>
   )
 }
