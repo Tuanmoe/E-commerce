@@ -4,15 +4,15 @@
     padding-top: 18px;
     padding-bottom: 10px;
     width: 100%;
-    gap:130px;
+    gap:150px;
     z-index: 1;
     background-color: white;
+    justify-content: center;
   
   .navbar_left {
     display: flex;
     gap:6px;
-    margin-left: 32px;
-  
+
     .lang {
       display: flex;
       margin-top: 9px;
@@ -54,7 +54,7 @@
   
   .navbar_right {
     display: flex;
-    gap:30px;
+    gap:50px;
   
     .nav {
       display: flex;
@@ -66,7 +66,7 @@
    }
     .icons {
       display: flex;
-      gap:8px;
+      gap:12px;
       margin-top: 3px;
     }
     .cart {

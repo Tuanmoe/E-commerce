@@ -6,7 +6,7 @@ const Carousel = () => {
   const [isCarouselLoading,setIsCarouselLoading] =useState(false);
   const [carouselSlides,setCarouselSlides] = useState([]);
   const [currentSlide,setCurrentSlide] = useState(0);
-  const delay=2500;
+  const delay=3500;
 
   const cleanUpFunction = (rawdata) => {
      const clearData=rawdata.map((slide)=>{

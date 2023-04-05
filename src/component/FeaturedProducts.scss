@@ -18,7 +18,9 @@
     background-color: rgb(136, 199, 131);
     display: flex;
     margin-top: 60px;
-    justify-content: space-around;
+    justify-content: center;
+    gap:20px;
+    height:400px;
     .product_card {
         background-color: white;
         width:300px;

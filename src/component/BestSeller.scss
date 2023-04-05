@@ -1,0 +1,36 @@
+.bestSeller_wrapper {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    margin-top:80px;
+    position: relative;
+    h1 {
+      position: absolute;
+      top:-60px;
+      font-size: 40px;
+    }
+    .bestSeller_item {
+        display:flex;
+        flex-direction: column;
+        align-self: center;
+        position: relative;
+        background-color: white;
+    
+
+        img {
+            width:400px;
+            height: 400px;
+            cursor: pointer;
+        }
+        .name {
+            cursor: pointer;
+        }
+        .addToCart_icon {
+            position:absolute;
+            bottom:0px;
+            right:0px;
+            cursor:pointer;
+            padding:5px 8px;
+        }
+    }
+}
