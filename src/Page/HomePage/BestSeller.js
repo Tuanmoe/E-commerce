@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './BestSeller.scss'
-import {client} from '../client'
+import {client} from '../../client'
 import {  useDispatch } from 'react-redux'
-import { addToCart, openProductModal} from '../redux/cartReducer'
+import { addToCart, openProductModal} from '../../redux/cartReducer'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 

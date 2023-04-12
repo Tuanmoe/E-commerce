@@ -2,13 +2,13 @@ import React from 'react'
 import './Footer.scss'
 import FacebookTwoToneIcon from '@mui/icons-material/FacebookTwoTone';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => {
   return (
     <div className='footer_wrapper'>
         <div className='branding'>
             <h1 className='logo'>T&T</h1>
+            <span className='phone'>Phone:0962309231</span>
             <span className="address">Address:Quang Trach,Quang Binh,Viet Nam</span>
             <div className="socials">
                 <span>Follow Us:</span>
@@ -16,10 +16,7 @@ const Footer = () => {
                      <FacebookTwoToneIcon/>
                 </div>
                 <div className='insta_icon'>
-                     <InstagramIcon/>
-                </div>
-                <div className='ytb_icon'>
-                     <YouTubeIcon/>      
+                     <InstagramIcon color='blue'/>
                 </div>
             </div>
         </div>

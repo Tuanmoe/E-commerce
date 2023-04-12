@@ -1,45 +1,45 @@
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from '@mui/icons-material/Search';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import { useSelector,useDispatch} from 'react-redux'
-import {NavLink} from 'react-router-dom'
+import { NavLink,useLocation} from "react-router-dom";
 
-
-import VnFlag from '../Images/VN.png'
 import "./Navbar.scss"
-import { openCartModal } from "../redux/cartReducer";
+import { openCartModal } from "../../redux/cartReducer";
+import {logout} from "../../redux/authReducer"
 
 const Navbar = () => {
 const products=useSelector((state)=> state.cart.items)
 const dispatch=useDispatch()
+const location=useLocation()
     return (
         <div className="navbar_wrapper">
             <div className="navbar_left">
                 <div className="nav">
-                    <h1>Stores</h1>
-                    <h1>Equipments</h1>
-                    <h1>Fashions</h1>
-                    <h1>Foods</h1>
+                {location.pathname!=='/Stores'? <NavLink  to= 'Stores' className='nav_item'>Stores</NavLink> : <NavLink  className='nav_item' to=''>Stores</NavLink> } 
+                    <NavLink to=''className='nav_item'>Equipments</NavLink >
+                    <NavLink to=''className='nav_item'>Fashions</NavLink >
+                    <NavLink to=''className='nav_item'>Foods</NavLink >
                 </div>
             </div>
-            <div className="logo_center">T&T</div>
+            <div className="logo_center">
+                <NavLink to='/' className='logo'>T&T</NavLink>
+            </div>
 
             <div className="navbar_right" >
                 <div className="nav">
-                    <h1>Homepage</h1>
-                    <h1>About</h1>
-                    <h1>Contact</h1>
-                    <h1>Blog</h1>
+                    <NavLink to="/" className='nav_item'>HomePage</NavLink> 
+                    <NavLink to='about' className='nav_item'>About</NavLink>
+                    <NavLink to='contact' className='nav_item '>Contact</NavLink>
+                    <NavLink to='blog' className='nav_item'>Blog</NavLink>
                 </div>
                 <div className="icons">
                     <SearchIcon />
-                    <div className="user">
-                        <NavLink to='SignUp'>
-                           <PermIdentityIcon />
-                        </NavLink>
+                    <div className="user" onClick={()=>dispatch(logout())}>            
+                           <LogoutOutlinedIcon />
                     </div>                   
                     <FavoriteBorderIcon />
                     <div className="cart" onClick={()=> dispatch(openCartModal())}>

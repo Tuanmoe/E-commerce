@@ -12,44 +12,27 @@
   .navbar_left {
     display: flex;
     gap:6px;
-
-    .lang {
-      display: flex;
-      margin-top: 9px;
-  
-      img {
-        width: 24px;
-        height: 16px;
-      }
-      .arrow {
-         margin-top:-5px;
-      }
-    }
     
-    .currency {
-      display: flex;
-      margin-top: 8px;
-      
-      p {
-        margin-top:-4px;
-      }
-      .arrow {
-        margin-top:-5px;
-      }
-    }
     .nav {
       display:flex;
       gap:24px;
-    h1 {
+      .nav_item {
       font-size:22px;
-      font-weight:400;
+      font-weight:300;
+      text-decoration: none;
+      color:black;
+    
     }
   }
   }
   .logo_center {
-    font-size:40px;
-    font-weight: 500;
     margin-top: -15px;
+    .logo {
+      text-decoration: none;
+      color:black;
+      font-size:40px;
+      font-weight: 500;
+    }
   }
   
   .navbar_right {
@@ -59,10 +42,19 @@
     .nav {
       display: flex;
       gap:24px;
-    h1 {
-      font-size:22px;
-      font-weight:400;
-     }
+
+      .nav_item {
+        text-decoration: none;
+        font-size:22px;
+        font-weight:300;
+        color:black;
+      }
+      .active {
+        color:black;
+        font-weight:400;
+      }
+
+      
    }
     .icons {
       display: flex;

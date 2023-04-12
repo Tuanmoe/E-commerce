@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {Navigate,useHistory} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import './index.css';
 import App from './App';
-import SignUp from './Page/SignUp';
-import SignIn from './Page/SignIn'
+import SignUp from './Page/SignUp/SignUp';
+import SignIn from './Page/SignIn/SignIn'
+import Stores from './Page/Store/index'
 import { store } from './redux/store' 
 import { Provider } from 'react-redux'
 import {
@@ -15,7 +16,7 @@ import {
 
 const RequireAuth=({children}) => {
     const currentUser=useSelector((state)=>state.auth.currentUser)
-    return currentUser?children:<Navigate to="SignIn"/>
+    return currentUser?children:<Navigate to="/SignIn" replace/>
 }
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path:"SignIn",
     element: <SignIn />
+  },
+  {
+    path:"Stores",
+    element: <RequireAuth children={<Stores/>} />,
   }
 ]);
 

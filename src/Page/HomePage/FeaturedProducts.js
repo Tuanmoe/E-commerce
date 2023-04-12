@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './FeaturedProducts.scss'
-import {client} from '../client'
+import {client} from '../../client'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
-import { useSelector, useDispatch } from 'react-redux'
-import { addToCart, openProductModal} from '../redux/cartReducer'
+import {  useDispatch } from 'react-redux'
+import { addToCart, openProductModal} from '../../redux/cartReducer'
 
 
 const FeaturedProducts = () => {

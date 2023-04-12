@@ -1,15 +1,18 @@
 .heading {
     display: flex;
     flex-direction: column;
+    background-color: rgb(136, 199, 131);
 
     .title {
-        margin-top:40px;
+        margin-top:20px;
         align-self: center;
+        color:white;
     }
     .sub_title {
         margin-top:10px;
         align-self: center;
         width: 90%;
+        color:white;
     }
 }
 
@@ -17,7 +20,7 @@
     padding-top:40px;
     background-color: rgb(136, 199, 131);
     display: flex;
-    margin-top: 60px;
+    // margin-top: 60px;
     justify-content: center;
     gap:20px;
     height:400px;

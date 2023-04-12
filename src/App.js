@@ -1,23 +1,19 @@
 import React from 'react';
 
-import Navbar from './component/Navbar'
-import Carousel from './component/Carousel';
-import BestSeller from './component/BestSeller';
-import FeaturedProducts from './component/FeaturedProducts';
+import HomePage from './Page/HomePage/index';
 import Cart from './component/Cart'
 import ProductBoxModal from './component/ProductBoxModal';
-import Footer from './component/Footer'
+
+import Store from './Page/Store/Equipment'
 
 function App() {
   return (
     <div className="App">
-         <Navbar />
-         <Carousel/>
-         <BestSeller/>
-         <FeaturedProducts />
+         <HomePage/>
          <Cart />
          <ProductBoxModal/>
-         <Footer/>
+         
+         
     </div>
   );
 }
