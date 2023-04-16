@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState= {
-    category:[],
-    hidden:false,
+    category:"",
+    search:"",
+    range:0,
 }
 const filterSlice=createSlice({
     name:'filter',
@@ -11,10 +12,14 @@ const filterSlice=createSlice({
         filterByCategory:(state,action)=> {
             state.category=action.payload;
         },
-        isHidden:(state)=>{
-            state.hidden=true;
-        }
+        filterBySearch:(state,action)=> {
+            state.search=action.payload;
+        },
+        filterByRange:(state,action)=> {
+            state.range=action.payload;
+        },
+        
     }
 })
-export const {filterByCategory,isHidden}=filterSlice.actions
+export const {filterByCategory,filterBySearch,filterByRange}=filterSlice.actions
 export default filterSlice.reducer;
